@@ -15,7 +15,6 @@ const WeatherApp = ({ city }) => {
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}&units=metric&lang=fr`
     fetch(url)
       .then((response) => {
-        console.log(response)
         if (!response.ok) {
           throw new Error("Météo untrouvable")
         }
